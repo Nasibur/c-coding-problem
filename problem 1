@@ -17,7 +17,7 @@ int main(){
    else if(d<0.5){
     cout << --c;
    }
-   else if(d=0.5) {
+   else if(d==0.5) {
         cout << c;
    }
    else {
