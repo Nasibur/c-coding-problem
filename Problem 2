@@ -1,0 +1,55 @@
+// Get an array and a digit which is the sum of any two elements of the array... print the index number of the elements
+
+#include<bits/stdc++.h>
+using namespace std;
+
+    int sumNum1(int n, int arr[], int k){
+
+          for(int i=0; i<n; i++){
+                for(int j=i+1; j<n; j++){
+                    int sum= arr[i]+arr[j];
+                    if(sum==k){
+                      return i;
+            }
+
+        }
+
+    }
+       return -1;
+    }
+
+        int sumNum2(int n, int arr[], int k){
+
+          for(int i=0; i<n; i++){
+                for(int j=i+1; j<n; j++){
+                    int sum= arr[i]+arr[j];
+                    if(sum==k){
+                      return j;
+            }
+
+        }
+
+    }
+       return -1;
+    }
+
+int main(){
+
+    int n;
+    cin>>n;
+
+    int arr[n];
+    for(int i=0; i<n; i++){
+        cin>> arr[i];
+    }
+
+    int k;
+    cin>>k;
+
+
+    cout << sumNum1(n,arr,k)<< " " ;
+    cout << sumNum2(n,arr,k)<<endl;
+
+
+   return 0;
+}
